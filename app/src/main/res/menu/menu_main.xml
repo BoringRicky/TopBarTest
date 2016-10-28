@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:title="收藏"
+        android:id="@+id/menu_collect"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="always"
+        />
+    <item
+        android:title="分享"
+        android:id="@+id/menu_share"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="always"
+        />
+</menu>
