@@ -15,8 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:contentScrim="@color/colorAccent"
-            app:titleEnabled="false"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -33,12 +33,12 @@
                 app:navigationIcon="@mipmap/ic_launcher">
 
                 <TextView
-                    android:gravity="center_vertical"
-                    android:textSize="32sp"
                     android:id="@+id/tv_title"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="标题"/>
+                    android:gravity="center_vertical"
+                    android:text="标题"
+                    android:textSize="32sp"/>
 
             </android.support.v7.widget.Toolbar>
 
@@ -56,13 +56,28 @@
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"/>
 
     </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        app:layout_behavior="com.liteng.topbar.app.MyBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorAccent"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="这里是Bottom"/>
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

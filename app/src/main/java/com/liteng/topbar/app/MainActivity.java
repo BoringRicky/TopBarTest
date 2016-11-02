@@ -3,6 +3,8 @@ package com.liteng.topbar.app;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,8 +20,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
     private NestedScrollView mNestedScrollView;
@@ -30,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar mToolbar;
 
     private String[] mTitles = {"西游记", "西游记", "西游记"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+
+
     }
 
     private class MyAdapter extends FragmentPagerAdapter {
@@ -139,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 
 
 }
